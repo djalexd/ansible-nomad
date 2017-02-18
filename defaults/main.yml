@@ -62,3 +62,6 @@ nomad_consul_enable: false
 nomad_consul_address: "127.0.0.1:8500"
 nomad_consul_auth: false
 nomad_consul_token: false
+
+nomad_options: false
+docker_cleanup_image: true

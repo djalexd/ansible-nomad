@@ -39,4 +39,9 @@ client {
 {% if nomad_client_network_interface %}
   network_interface = "{{ nomad_client_network_interface }}"
 {% endif %}
+{% if nomad_options %}
+  options = {
+    "docker.cleanup.image" = "{{ docker_cleanup_image }}"
+  }
+{% endif %}
 }
