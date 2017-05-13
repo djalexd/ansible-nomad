@@ -31,6 +31,9 @@ nomad_syslog_facility: "LOCAL0"
 nomad_disable_update_check: false
 nomad_disable_anonymous_signature: false
 
+nomad_use_upstart: true
+nomad_use_systemd: false
+
 nomad_telemetry_statsite_address: ''
 nomad_telemetry_statsd_address: ''
 nomad_telemetry_disable_hostname: false

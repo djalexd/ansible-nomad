@@ -65,6 +65,8 @@ Role Variables
 | nomad_server_retry_interval       | 30s                                                              | The time to wait between join attempts                                                                                                                                                                                                     |
 | nomad_server_retry_max            | 0                                                                | The maximum number of join attempts to be made before exiting with a return code of 1. By default, this is set to 0 which is interpreted as infinite retries                                                                               |
 | nomad_server_start_join           | []                                                               | An array of strings specifying addresses of nodes to join upon startup. If Nomad is unable to join with any of the specified addresses, agent startup will fail.                                                                           |
+| nomad_use_upstart                 | true                                                             | Configure role to provide upstart script |
+| nomad_use_systemd                 |                                                                  | Configure role to provide systemd script |
 
 
 Dependencies

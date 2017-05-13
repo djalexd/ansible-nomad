@@ -98,7 +98,7 @@
     state: directory
     mode: 0755
 
-  
+
 
 - name: Unarchive nomad.zip
   become: yes
@@ -144,7 +144,7 @@
     - restart nomad
   tags:
     - nomad
-  when: ansible_os_family != "RedHat"
+  when: nomad_use_upstart
 
 - name: Create Nomad systemd configuration
   become: yes
@@ -158,7 +158,7 @@
     - systemd reload
   tags:
     - nomad
-  when: ansible_os_family == "RedHat"
+  when: nomad_use_systemd
 
 - name: Create Nomad configuration file
   become: yes
