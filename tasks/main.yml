@@ -150,7 +150,7 @@
   become: yes
   template:
     src: nomad.service.j2
-    dest: /usr/lib/systemd/system/nomad.service
+    dest: /etc/systemd/system/nomad.service
     owner: root
     group: root
     mode: 0644
