@@ -223,3 +223,11 @@
     enabled: yes
   tags:
     - nomad
+
+- name: add Nomad to path through profile.d
+  template: >
+    src=nomad.sh.j2
+    dest=/etc/profile.d/nomad.sh
+    owner=root
+    group=root
+    mode=0755
